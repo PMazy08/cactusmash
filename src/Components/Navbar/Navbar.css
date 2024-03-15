@@ -1,0 +1,39 @@
+.navbar{
+    display: flex;
+    height: 56px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(31, 31, 31, 0.8);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.9); 
+    backdrop-filter: blur(10px);
+}
+
+.textlogo-nav{
+    font-family: "Lilita One", sans-serif;
+    font-style: normal;
+  }
+
+.select-p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+}
+
+
+.select-nav{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.select-nav h3 {
+    font-weight: bold;
+}
+
+.select-nav:hover, .select-nav.active {
+    color: #74BC38;
+    text-shadow: 0 0 10px #74BC38, 0 0 0 #74BC38, 0 0 0 #74BC38;
+}

@@ -1,0 +1,56 @@
+.bo-top{
+    background-image: url('../../assets/vast-desert.jpg');
+    background-size: cover; /* ปรับขนาดภาพพื้นหลังให้เต็มขนาดของคอนเทนเนอร์ */
+    background-position: center; /* ยืดภาพพื้นหลังจากส่วนกลาง */
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.botop-center{
+    width: 1000px;
+    height: auto;
+    margin-top: 79px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.top-img{
+    display: flex;
+    align-items: center;
+    border-radius: 7px;
+    background-color: rgba(138,120,110, 0.4);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(10px);
+    height: 550px;
+    width: 350px;
+    flex-direction: column;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.topcac-img img{
+    background-color: white;
+    width: 300px;
+    height: 400px;
+    border-radius: 7px;
+    object-fit: cover;
+}
+.rank{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    width: 150px;
+    height: 50px;
+    background-color: rgba(255, 235, 17, 0.7);
+    color: white;
+    margin: 10px;
+}

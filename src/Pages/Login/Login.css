@@ -1,0 +1,89 @@
+*{
+  margin: 0px;    
+
+}
+
+.textlogo{
+  font-family: "Lilita One", sans-serif;
+  font-style: normal;
+  font-size: 50px;
+}
+
+.body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: black; */
+  background-image: url('../../assets/vast-desert.jpg');
+  background-size: cover; /* ปรับขนาดภาพพื้นหลังให้เต็มขนาดของคอนเทนเนอร์ */
+  background-position: center; /* ยืดภาพพื้นหลังจากส่วนกลาง */
+  height: 100vh;
+  flex-direction: column;
+}
+.boxLog{
+  width: 390px;
+  height: auto;
+  border-radius: 7px;
+  background-color: rgb(255, 255, 255);
+
+  color: white;
+
+  background-color: rgba(138,120,110, 0.4);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); 
+  backdrop-filter: blur(10px);
+
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.input-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.input-box input{
+  border: none;
+  outline: none;
+  margin-top: 20px;
+  width: 350px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.button-box button{
+  margin-top: 20px;
+  width: 350px;
+  height: 40px;
+  background-color: #C16D25;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.button-box .buttonC{
+  margin-top: 20px;
+  width: 250px;
+  height: 40px;
+  background-color: #74BC38;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* find */
+.ff{
+  background-color: #b1b1b1;
+}
