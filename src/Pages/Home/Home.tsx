@@ -4,7 +4,7 @@ import './Home.css'
 function HomePage() {
     return ( 
         <>
-        AppBar
+        AppBar hello
         </>
     );
 }
