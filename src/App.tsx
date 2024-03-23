@@ -7,6 +7,8 @@ import RegisterPage from './Pages/Register/Register';
 import ProfilePage from './Pages/Profile/Profile';
 import ToptenPage from './Pages/Topten/Topten';
 import VsPage from './Pages/Vs/VS';
+import UsersPage from './Pages/Users/Users';
+import ProfileallPage from './Pages/Profileall/Phofileall';
 
 function App() {
 
@@ -15,25 +17,17 @@ function App() {
       { path: "/login", element: <LoginPage /> },
       { path: "/register", element: <RegisterPage/>},
       { path: "/profile", element: <ProfilePage/>},
+      { path: "/profile/:uId", element: <ProfileallPage/>},
+      
       { path: "/top-10", element: <ToptenPage/>},
       { path: "/vs", element: <VsPage/>},
       { path: "/", element: <VsPage/>},
+      { path: "/alluser", element: <UsersPage/>},
     ]
   );
   return (
     <>
-
-    <RouterProvider router={routers} />
-    {/* <Router>
-      <AppBar/>
-      <Routes>
-          <Route path="/" element={<VsPage />} />
-          <Route path="/vs" element={<VsPage />} />
-          <Route path="/top10" element={<ToptenPage />} />
-          <Route path="/me" element={<ProfilePage />} />
-      </Routes>
-    </Router> */}
-
+      <RouterProvider router={routers} />
     </>
   )
 }

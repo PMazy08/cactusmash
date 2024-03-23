@@ -1,3 +1,6 @@
+*{
+    text-decoration: none;
+}
 .bo-vs{
     background-image: url('../../assets/vast-desert.jpg');
     background-size: cover; /* ปรับขนาดภาพพื้นหลังให้เต็มขนาดของคอนเทนเนอร์ */
@@ -27,26 +30,39 @@
 }
 
 .vs-user{
+    width: 100%;
+}
+
+.vs-usernsme{
+    margin-left: 25px;
     display: flex;
     align-items: center;
-    justify-content: center;
     height: 60px;
     object-fit: cover;
-    color: white;
-    cursor: pointer;
+}
+
+.vs-usernsme {
+
 }
 
 .vs-user img{
+    background-color: rgba(202, 202, 202, 0.7);
     width: 40px;
     height: 40px;
     object-fit: cover;
-    
+    border-radius: 50%;
+    cursor: pointer;    
 }
 
-
+.vs-user p{
+    margin-left: 10px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
 
 .vs-img .cac-img img{
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     width: 300px;
     height: 400px;
     border-radius: 7px;
@@ -55,27 +71,24 @@
 
 .cac-img img{
     transition: 0.1s ease;
-    }
+}
     
-    .cac-img img:hover{
-    -webkit-transform: rotateZ(-10deg);
-    -ms-transform: rotateZ(-10deg);
-    transform: rotateZ(-10deg);
-    transition: 0.5s ease;
-    }
+.cac-img img:hover{
+    transform: scale(1.03);
+    box-shadow: 0 0 10px #ffcd05, 0 0 10px #74BC38, 0 0 10px #74BC38;
+}
 
-
-
-
-
-.score{
+.score {
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 7px;
     width: 150px;
     height: 50px;
-    background-color: rgba(48, 48, 48, 0.7);
+    background-color: rgba(202, 202, 202, 0.7);
     color: white;
     margin-top: 10px;
+}
+.score h1{
+    font-weight: bold;
 }

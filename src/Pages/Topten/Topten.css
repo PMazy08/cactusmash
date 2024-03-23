@@ -14,7 +14,7 @@
 
 .botop-center{
     width: 1000px;
-    height: auto;
+    height: 5750px;
     margin-top: 79px;
     display: flex;
     align-items: center;
@@ -33,7 +33,39 @@
     width: 350px;
     flex-direction: column;
     margin-top: 20px;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
+}
+
+.top-user{
+    width: 100%;
+}
+
+.top-usernsme{
+    /* margin-left: 15px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    object-fit: cover;
+    color: white;
+    /* background-color: aqua; */
+    
+}
+
+.top-user img{
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.top-user p{
+    margin-left: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
 }
 
 .topcac-img img{
@@ -48,9 +80,10 @@
     align-items: center;
     justify-content: center;
     border-radius: 7px;
-    width: 150px;
+    width: 100px;
     height: 50px;
-    background-color: rgba(255, 235, 17, 0.7);
+    /* background-color: rgba(255, 235, 17, 0.7); */
+    background-color: #FFD700;
     color: white;
     margin: 10px;
 }

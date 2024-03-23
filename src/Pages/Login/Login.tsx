@@ -1,55 +1,58 @@
-import {useRef } from "react";
+import {useRef} from "react";
 import "./Login.css"
-import axios from "axios";
-import { Link } from "react-router-dom";
-
+import { useNavigate} from "react-router-dom";
+import { CactusServices } from "../../services/CactusServices";
 function LoginPage() {
+    const navigate = useNavigate();
+    const cactusservise = new CactusServices();
 
     const usernameRef = useRef<HTMLInputElement>(null);
     const passwordRef = useRef<HTMLInputElement>(null);
 
-
-
-
     return ( 
         <>
         <div className="body">
-            <h1 className="textlogo" style={{color: '#74BC38', marginBottom: '20px', }}>Cactusmash</h1>
+            <h1 className="textlogo" style={{color: '#74BC38', marginBottom: '20px',cursor : "pointer" }}
+            onClick={() => navigate('/')}>
+                Cactusmash
+            </h1>
             <div className="boxLog">
                 <div className="boxL">
-                <p style={{display: 'flex', justifyContent: 'center',marginTop: '20px'}}>Log in to Cactusmash</p>
+                <p style={{display: 'flex', justifyContent: 'center',marginTop: '20px', fontWeight: "bold"}}>Log in to Cactusmash</p>
                 <div className="input-box">
-                    <input type="text" placeholder="Username" ref={usernameRef} />
+                    <input type="email" placeholder="Email" ref={usernameRef} />
                 </div>
                 <div className="input-box">
-                    <input type="password" placeholder="Password" ref={passwordRef} />
+                    <input type="password" placeholder="Password" ref={passwordRef} 
+                        onKeyDown={(e) => {
+                            if (e.key === 'Enter') {
+                                login(usernameRef.current!.value, passwordRef.current!.value); 
+                            }
+                        }}
+                    />
                 </div>
                 <div className="button-box">
-                    <button onClick={() => getu(usernameRef.current!.value, passwordRef.current!.value)} type="submit">Login</button>  
+                    <button onClick={() => login(usernameRef.current!.value, passwordRef.current!.value)} type="submit">Login</button>  
                 </div>
 
                 <div style={{display: 'flex', justifyContent: 'center'}}>
                 <hr style={{margin: '20px 0 0px', width: '310px'}} />
                 </div>
 
-                <Link to="/register" style={{textDecoration: 'none' }}>
-                    <div className="button-box">
-                        <button className="buttonC" type="submit" >Create new account</button>  
-                    </div>
-                </Link>
+                <div className="button-box">
+                    <button onClick={() => navigate('/register')} className="buttonC" type="submit" >Create new account</button>  
+                </div>
                 </div>
             </div>
         </div>
         </>
      );
 
-     async function getu(umae: string, psw: string) {
-        console.log(umae+psw);
-        
-        const url = `http://localhost:3000/user/${umae}/${psw}`;
-        const response = await axios.get(url);
-        console.log(response.data);
-        return response.data;
+     async function login(email: string, password: string) {
+        const res = await cactusservise.getUser(email, password)
+        if (res) {
+            navigate("/vs");
+        } 
       }
 }
 
